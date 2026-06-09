@@ -1,0 +1,1457 @@
+"use stirct";
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+// };
+
+// //DESTRUCTURING OF ARRAY
+// const price = [70, 80, 40, 70];
+
+// const first = price[0];
+// const second = price[1];
+// const third = price[2];
+// const fourt = price[3];
+
+// const [a, b, c, d] = price;
+// console.log(a, b, c, d);
+// console.log(price);
+
+// const own = ([firstpics, secondpic, thirdpic, fourtpic] = meryenda.Owner);
+// const names = ([firstpica, secondpic, thirdpic, fourtpic] = meryenda.Name);
+
+// let [firstpic, sarapmo] = meryenda.mainmenu;
+
+// console.log(firstpic, sarapmo);
+
+// // do not use let and const to reasigning variable
+// // switching variables
+// [firstpic, sarapmo] = [sarapmo, firstpic];
+// console.log(firstpic, sarapmo);
+
+// // this is method call
+// const [firsts, secondss] = meryenda.order(2, 0);
+// console.log(firsts, secondss);
+
+// // NESTED ARRAY
+// const switchings = [1, 2, [7, 8]]; // ARRAY INSIDE ARRAY "NESTED ARRAY"
+// const [one, , eight] = switchings;
+
+// console.log(one, eight);
+
+// // DESTRUCTURING INSIDE DESTRUCTUNGRING
+// const [ones, , [seven, eights]] = switchings;
+// console.log(ones, seven, eights);
+
+// // console.log(` this owner: ${own}`);
+// // console.log(` Branch Name: ${names}`);
+// // console.log("order: ", firstpic, sarapmo);
+
+// // let change = sarapmo; // sarapmo may value na sisig
+// // sarapmo = firstpic; // si sisig niqual sa firstpic na may value na adobo "magiging sisig na sya "
+// // firstpic = change; // yung firstpic nilipat sa walang laman na varialble si change "sisig ang output"
+// // //  kasi si firstpic pinalitan na sya ng "sisig"
+// // console.log(change);
+// // // output sisig
+
+// DESTRUCTURING OBEJECT
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   opensched: {
+//     monday: {
+//       open: 8,
+//       close: 8,
+//     },
+//     tuesday: {
+//       open: 6,
+//       close: 6,
+//     },
+//     wednesday: {
+//       open: 7,
+//       close: 7,
+//     },
+//     thursday: {
+//       open: 9,
+//       close: 9,
+//     },
+//     friday: {
+//       open: 10,
+//       close: 10,
+//     },
+//     saturday: {
+//       open: 11,
+//       close: 11,
+//     },
+//     sunday: {
+//       open: 5,
+//       close: 8,
+//     },
+//   },
+//   //  METHODS
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver: function ({
+//     firstorder = 2,
+//     secondorder = 1,
+//     address,
+//     times = "20:10",
+//   }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+// };
+
+// // kapag nag invoke ka ng object dapat mga bracket sa loob ng parameter
+// meryenda.orderdeliver({
+//   times: "11:30",
+//   address: "junji rolling hills",
+//   firstorder: 2,
+//   secondorder: 1,
+// });
+
+// meryenda.orderdeliver({
+//   firstorder: 3,
+//   address: "junjis",
+//   secondorder: 2,
+//   times: "20:10",
+// });
+
+// // DESTRUCTURING OBJECT
+// const { Name, opensched, categories } = meryenda;
+
+// console.log(Name, opensched, categories);
+
+// // DEFAULT VALUE
+// const { menu = [], startmenu: starters = [] } = meryenda;
+
+// //THIRD PARTY DATA OBJECT
+// const {
+//   Name: restaurantName,
+//   opensched: openscheds,
+//   mainmenu: select,
+// } = meryenda;
+
+// console.log(restaurantName, openscheds, select);
+
+// // mutating variable
+
+// let x = 100;
+// let y = 200;
+// const priceli = { x: 80, y: 100 };
+// ({ x, y } = priceli); // DESTRUCTURING ASSIGMENT INTO PARENTHESIS
+
+// console.log(x, y);
+
+// // NESTED OBJECT
+// const {
+//   friday: { open: poe, close: ose },
+// } = opensched;
+// console.log(poe, ose);
+
+// SPREAD OPERATORS
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   opensched: {
+//     monday: {
+//       open: 8,
+//       close: 8,
+//     },
+//     tuesday: {
+//       open: 6,
+//       close: 6,
+//     },
+//     wednesday: {
+//       open: 7,
+//       close: 7,
+//     },
+//     thursday: {
+//       open: 9,
+//       close: 9,
+//     },
+//     friday: {
+//       open: 10,
+//       close: 10,
+//     },
+//     saturday: {
+//       open: 11,
+//       close: 11,
+//     },
+//     sunday: {
+//       open: 5,
+//       close: 8,
+//     },
+//   },
+//   //  METHODS
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver: function ({
+//     firstorder = 2,
+//     secondorder = 1,
+//     address,
+//     times = "20:10",
+//   }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo: function (receipe1, receipe2, receipe3) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// const array = [7, 14, 16];
+// const addarray = [2, 23, array[0], array[1], array[2]];
+// console.log(addarray);
+
+// const add = [2, 23, array];
+// console.log(add);
+
+// // direct to console
+// console.log(...add);
+
+// // manual selecting
+// console.log(2, 23, 7, 14, 16);
+
+// // add new mainmenu
+// const Menus = [...meryenda.mainmenu, "dinakdakan na baboy"];
+// console.log(Menus);
+
+// // 2 joins array
+// const allmenu = [...meryenda.categories, ...meryenda.mainmenu];
+// console.log(allmenu);
+
+// // iterables: array , strings , maps ,sets "NOT OBEJECT"
+// //  stingis
+
+// let stringis = "ariel pogi";
+// let letra = [...stringis, "", "P."];
+// console.log(letra);
+// console.log("a", "r");
+// console.log(...letra);
+
+// const secretrecp = [
+//   // prompt(`enter receipe 1`),
+//   // prompt(`enter receipe 2`),
+//   // prompt(`enter receipe 3`),
+// ];
+
+// // console.log(...secretrecp);
+
+// meryenda.receipeAdobo(secretrecp[0], secretrecp[1], secretrecp[2]);
+// meryenda.receipeAdobo(...secretrecp);
+
+// // OBJECT
+// const newNamerest = { found: 2000, ...meryenda, founder: "ariel mendoza pogi" };
+// console.log(newNamerest);
+
+// // array
+// const arrayName = { ...meryenda };
+// arrayName.name = "monique vicenal";
+// console.log(arrayName);
+
+// REST PATTERN AND PARAMETERS
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   opensched: {
+//     monday: {
+//       open: 8,
+//       close: 8,
+//     },
+//     tuesday: {
+//       open: 6,
+//       close: 6,
+//     },
+//     wednesday: {
+//       open: 7,
+//       close: 7,
+//     },
+//     thursday: {
+//       open: 9,
+//       close: 9,
+//     },
+//     friday: {
+//       open: 10,
+//       close: 10,
+//     },
+//     saturday: {
+//       open: 11,
+//       close: 11,
+//     },
+//     sunday: {
+//       open: 5,
+//       close: 8,
+//     },
+//   },
+//   //  METHODS
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver: function ({
+//     firstorder = 2,
+//     secondorder = 1,
+//     address,
+//     times = "20:10",
+//   }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo: function (receipe1, receipe2, receipe3) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+
+//   orderadobo: function (receipes, ...othersreceipe) {
+//     console.log(receipes);
+//     console.log(othersreceipe);
+//   },
+// };
+// // SPREAD OPERATOR KASI NASA KANAN =
+// const array = [6, 7, ...[9, 10]];
+
+// // REST KASI NASA KALIWA
+// const [a, b, ...ibapa] = [6, 7, 8, 9, 10];
+// console.log(a, b, ibapa);
+
+// // SELECT THE ORDER AND LALABAS YUNG MGA IBA HINDE NA PILI USING NA NAKA ARRAY NA
+// const [maruya, sisig, ...ibapakain] = [
+//   ...meryenda.categories,
+//   ...meryenda.mainmenu,
+// ];
+
+// console.log(maruya, sisig, ...ibapakain);
+
+// // OBJECT
+// // REMOVED THE OBJECT
+// const { saturday, sunday, ...weeksendss } = meryenda.opensched;
+// console.log(weeksendss);
+
+// // REST SYNTAX
+// const sum = function (...Adds) {
+//   let summary = 0;
+//   for (let i = 0; i < Adds.length; i++) {
+//     summary += Adds[i];
+//     console.log(summary);
+//   }
+// };
+
+// sum(4, 2);
+// sum(4, 24, 2);
+// sum(4, 2, 4, 2, 4, 2);
+// sum(4, 2);
+
+// // add other function
+// const s = [25, 50];
+// // invoke using spread oeprator
+// sum(...s);
+// meryenda.orderadobo("sugar", "onion", "tae", "pepe");
+
+// USING SPREAD OPERATOR TARGER VARIABLE NAMES SEPARATED COMMAS
+// USE REST ONUSE OR OUT USE IN THIS PARAMETER KINUKUHA NYA YUNG HINDE NAKUHA NA DATA AT DIDISPLAY NYA NG ARRAY
+
+// TWO LOGICAL OPERATOR AND OR &&
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   opensched: {
+//     monday: {
+//       open: 8,
+//       close: 8,
+//     },
+//     tuesday: {
+//       open: 6,
+//       close: 6,
+//     },
+//     wednesday: {
+//       open: 7,
+//       close: 7,
+//     },
+//     thursday: {
+//       open: 9,
+//       close: 9,
+//     },
+//     friday: {
+//       open: 10,
+//       close: 10,
+//     },
+//     saturday: {
+//       open: 11,
+//       close: 11,
+//     },
+//     sunday: {
+//       open: 5,
+//       close: 8,
+//     },
+//   },
+//   //  METHODS
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver: function ({
+//     firstorder = 2,
+//     secondorder = 1,
+//     address,
+//     times = "20:10",
+//   }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo: function (receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// // use any data type  return any data type
+// // short circuiting evaluation
+// // sa OR operator pag ka nag true ang unang value ayon ididisplay
+// console.log(16 || "16");
+// console.log(true || 20);
+// console.log("" || 10);
+// console.log(undefined || null);
+// console.log(true || 0);
+
+// // meryenda.orders = 50;
+// // using ternary operator
+// const order1 = meryenda.orders ? meryenda.orders : 10;
+// console.log(order1);
+// // USING LOGICAL OR OPERATOR
+// const order2 = meryenda.orders || 10;
+// console.log(order2);
+
+// // -----AND---------
+// console.log(0 && "ariel"); // falsy kasi unang condition is 0 value nya falsy
+// console.log("" && "edu"); // "" falsy kasi ang value ng empy string ay falsy
+// console.log(10 && "ariel"); // falsy kasi false si ariel
+// // KAPAG PAREHAS ANG CONDITION ANG OUTPUT NYA IS TRUE SA && AND OPERATOR KAHIT ISA LANG ANG MALI ANG
+// // RERETRUN NYANG VALUE IS YUNG FALSE NA VALUE AYON MAGIGING OUTPUT NA FALSY
+// console.log(10 && 10); // true kasi parehas true ang condition
+
+// if (meryenda.mainmenu) {
+//   meryenda.receipeAdobo && meryenda.receipeAdobo("sisig", "sinigang", "adobo");
+// }
+
+// meryenda.receipeAdobo && meryenda.receipeAdobo("sisig", "adobo", "sinigang");
+
+// // NULLISH CHECK NULL AND UNDEFINED (KUNG 0 ANG VALUE 0 LANG DIDIPSLAY NYA )
+// const nulist1 = meryenda.orders ?? 0; // 0 kasi hinde sya falsy sa  (Nullish Coalescing Operator.)
+// console.log(nulist1);
+
+// const nulist2 = meryenda.orders ?? undefined; //output undefined kasi chicheck ng ??  (Nullish Coalescing Operator.)
+// console.log(nulist2);
+
+// const nulist3 = meryenda.orders ?? null; // out put NULL kasi ang chineckeck ng ?? (Nullish Coalescing Operator.)
+
+// console.log(nulist3);
+
+// const nulist4 = meryenda.orders ?? ""; // empty string mag coconsole sya pero di nakikita
+// console.log(nulist4);
+
+// const restaurant1 = {
+//   name: "monique",
+//   owner: 1,
+//   bill: 800,
+// };
+
+// // VIP
+// const restaurant2 = {
+//   name: "ariel",
+//   viptab: 1,
+//   bill: 2000,
+// };
+
+// // customer
+// const customers1 = {
+//   name: "granger",
+//   tablenum: 1,
+//   bill: 150,
+// };
+
+// const customers2 = {
+//   name: "psyleer",
+//   tablenum: 2,
+//   bill: 200,
+// };
+
+// USING AND OPERATOR
+// OR ASSIGNMENT OPERATOR
+// restaurant1.bill = restaurant1.bill && 800;
+// restaurant2.bill = restaurant2.bill && 2000;
+
+// shortcut
+// restaurant1.bill &&= 20;
+// restaurant2.bill &&= 20;
+
+// OR ASSIGNMENT OPERATOR
+// FOR BILL CUSTOMERS
+
+// customers1.bill = customers1.bill && 150;
+// customers2.bill = customers2.bill && 200;
+// shorthand
+
+// customers1.bill &&= 30;
+// customers2.bill &&= 20;
+
+// USING OR OPERATOR (||)
+// restaurant1.bill = restaurant1.bill || 0;
+// restaurant2.bill = restaurant2.bill || 0;
+// SHORTCUT
+// restaurant1.bill ||= 0;
+// restaurant2.bill ||= 0;
+
+// // customers1.bill = customers1.bill || 0;
+// // customers2.bill = customers2.bill || 0;
+// // SHORT HAND
+// customers1.bill || 30;
+// customers2.bill || 20;
+
+// // NULLISH (NULLSH ANG CHINECHECK NYA LANG AY "UNDEFINED or NULL")
+
+// restaurant1.bill ??= 4;
+// restaurant2.bill ??= 4;
+
+// restaurant1.name = restaurant1.name && "CLASS A";
+// restaurant2.name = restaurant2.name && "CLASS B";
+
+// restaurant1.name &&= "monique";
+// restaurant2.name &&= "ariel";
+// console.log(restaurant1);
+// console.log(restaurant2);
+// console.log("");
+// console.log(customers1);
+// console.log(customers2);
+
+// BALIKAN MO TO CODING CHALLENGE
+// const playgame = {
+//   teamA: "lakers",
+//   teamB: "golden states",
+//   game: [
+//     [
+//       "ariel",
+//       "jayjay",
+//       "inchan",
+//       "aljon",
+//       "andrei",
+//       "junjun",
+//       "ngongo",
+//       "granger",
+//       "doglas",
+//       "daniel",
+//     ],
+//     [
+//       "niko",
+//       "wendel",
+//       "owen",
+//       "ebeng",
+//       "eseng",
+//       "kabayo",
+//       "matabang",
+//       "taba",
+//       "kulafo",
+//       "aybi",
+//     ],
+//   ],
+
+//   score: 21,
+//   scores: ["ariel", " jayjay", "niko", "owen"],
+//   date: "febuary 25 2026",
+//   wins: {
+//     teamA: 21,
+//     teamB: 16,
+//     draw: 3.55,
+//   },
+// };
+
+// const [players1, players2] = playgame.game;
+// console.log(players1, players2);
+
+// const [aced, ...magaling] = players1;
+// console.log(aced, magaling);
+
+// const allplayers = [...players1, ...players2];
+// console.log(allplayers);
+
+// const finalsgame = [...allplayers, "junji", "valenzuela", "tawid gutom"];
+
+// const {
+//   wins: { teamA, teamB, draw },
+// } = playgame;
+
+// const goals = function (...allplayers) {
+//   console.log(`${allplayers.length} ang galing nyo `);
+// };
+
+// // goals("ariel", "jayjay");
+// // goals("niko", "owen");
+
+// goals(playgame.scores);
+
+// teamA < teamB && console.log("team A is winning leeg tama boss");
+// teamB > teamA && console.log("team A is winning leeg tama boss");
+
+// LOOPINGS ARRAY THE FOR OF LOOP
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   opensched: {
+//     monday: {
+//       open: 8,
+//       close: 8,
+//     },
+//     tuesday: {
+//       open: 6,
+//       close: 6,
+//     },
+//     wednesday: {
+//       open: 7,
+//       close: 7,
+//     },
+//     thursday: {
+//       open: 9,
+//       close: 9,
+//     },
+//     friday: {
+//       open: 10,
+//       close: 10,
+//     },
+//     saturday: {
+//       open: 11,
+//       close: 11,
+//     },
+//     sunday: {
+//       open: 5,
+//       close: 8,
+//     },
+//   },
+//   //  METHODS
+//   order: function (firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver: function ({
+//     firstorder = 2,
+//     secondorder = 1,
+//     address,
+//     times = "20:10",
+//   }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo: function (receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// // ANG FOR LOOP REKTA VALUE NA SYA
+// // const mainmenuss = [...meryenda.categories, ...meryenda.mainmenu];
+// // for (let choices of mainmenuss) {
+// //   console.log(choices);
+// // }
+
+// const mainmenuss = [...meryenda.categories, ...meryenda.mainmenu];
+
+// // .ENTRIES() IS CONVERT TO ARRAY OF THE (OF LOOP)+
+
+// // for counter start menu choices to good number and choices format using THIS
+// for (const [i, elem] of mainmenuss.entries()) {
+//   console.log(`${i + 1} : ${elem}`);
+// }
+
+// ENHANCED OBJECT LITERALS
+// const week = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   [week[0]]: {
+//     open: 8,
+//     close: 8,
+//   },
+//   tuesday: {
+//     open: 6,
+//     close: 6,
+//   },
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+//   friday: {
+//     open: 10,
+//     close: 10,
+//   },
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 5,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// OPTIONAL CHAINING
+// const week = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   [week[0]]: {
+//     open: 8,
+//     close: 8,
+//   },
+
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 0,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// if (meryenda.opensched && meryenda.opensched.open)
+//   console.log(meryenda.opensched.sunday.open);
+
+// // with optional chaining
+// console.log(meryenda.opensched?.sundays?.open);
+
+// const weeks = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// for (const aday of weeks) {
+//   const opens = meryenda.opensched[aday]?.open ?? "closed";
+//   console.log(`on ${aday} open at ${opens}`);
+// }
+
+// console.log(meryenda.order?.(3, 3) ?? "ariel pogis ");
+
+// LOOPING OBJECT, OBJECT KEYS, AND ENTRIES
+
+// const weeks = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   [weeks[0]]: {
+//     open: 8,
+//     close: 8,
+//   },
+
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 0,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+// //  PROPERTY NAMES
+// const announce = Object.keys(week);
+// console.log(announce);
+// let string = `we are opens my meryendas ${announce.length}`;
+
+// for (let daily of announce) {
+//   string += `${daily}`;
+// }
+// console.log(string);
+
+// // PROPERTY VALUES
+// const val = Object.values(opensched);
+// console.log(val);
+
+// // OBJECT ENTRIES
+
+// const ent = Object.entries(opensched);
+
+// // DESTRUCTUING [KET {VALUE}]
+// for (const [i, { open, close }] of ent) {
+//   console.log(`on ${i} we are open ${open} and closed at ${close}`);
+// }
+
+// const weeks = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   [weeks[0]]: {
+//     open: 8,
+//     close: 8,
+//   },
+
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 0,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// const playgame = {
+//   teamA: "lakers",
+//   teamB: "golden states",
+//   game: [
+//     [
+//       "ariel",
+//       "jayjay",
+//       "inchan",
+//       "aljon",
+//       "andrei",
+//       "junjun",
+//       "ngongo",
+//       "granger",
+//       "doglas",
+//       "daniel",
+//     ],
+//     [
+//       "niko",
+//       "wendel",
+//       "owen",
+//       "ebeng",
+//       "eseng",
+//       "kabayo",
+//       "matabang",
+//       "taba",
+//       "kulafo",
+//       "aybi",
+//     ],
+//   ],
+
+//   score: 21,
+//   scores: ["ariel", " jayjay", "niko", "owen"],
+//   date: "febuary 25 2026",
+//   wins: {
+//     teamA: 21,
+//     teamB: 16,
+//     draw: 3.55,
+//   },
+// };
+// // 1.
+// for (const [i, player] of playgame.scores.entries()) {
+//   console.log(`aced ${i + 1}: ${player}`);
+// }
+
+// const result = Object.values(playgame.wins);
+// let averages = 0;
+// for (const win of result) averages += win;
+// averages /= result.length;
+// console.log(averages);
+
+// for (const [team, wins] of Object.entries(playgame.wins)) {
+//   const strs = team === "x" ? "draw" : `victory ${playgame[team]}`;
+//   console.log(`wins of ${strs} , ${wins}`);
+// }
+
+// const weeks = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   weeks: {
+//     open: 8,
+//     close: 8,
+//   },
+
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 0,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo", "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// // SETS
+// const orderssets = new Set(["angels", "pizza", "pizza", "milktea", "aybii"]); // hinde nag duduplicate ang value
+// // console.log(orderssets);
+// orderssets.has("anegels"); // check the existing data
+// orderssets.has("anegelss"); // ang has bolean true pag existing false pag hinde
+// orderssets.add("coffee"); // ang add the value
+// orderssets.delete("pizza  "); // ang delete delete the value
+// // orderssets.clear(); // ang clear ay kiniclear nya lahat
+// console.log(orderssets);
+
+// // console.log(orderssets.size); // ang .size ay nag sasabi lang ng ilan unique value
+
+// for (let ordera of orderssets) console.log(ordera);
+
+// const employe = ["HR", "IT", "accounting", "credit", "IT", "HR"];
+// const employeunique = new Set(employe);
+// // const employeunique = [...new Set(employe)]; // using spreads operator to translate array
+// console.log(new Set(["HR", "IT", "accounting", "credit", "IT", "HR"]).size);
+
+// console.log(new Set("ariel pogi").size);
+
+// "sisig"],
+//   // ENHANCED OBJECT LITERALS
+//   opensched,
+
+//   //  METHODS
+//   order(firstorder, secondorder) {
+//     return [this.categories[firstorder], [this.mainmenu[secondorder]]];
+//   },
+// const weeks = [
+//   "moday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+
+// const opensched = {
+//   weeks: {
+//     open: 8,
+//     close: 8,
+//   },
+
+//   wednesday: {
+//     open: 7,
+//     close: 7,
+//   },
+//   thursday: {
+//     open: 9,
+//     close: 9,
+//   },
+
+//   saturday: {
+//     open: 11,
+//     close: 11,
+//   },
+//   sunday: {
+//     open: 0,
+//     close: 8,
+//   },
+// };
+
+// const meryenda = {
+//   Owner: "ariel mendoza",
+//   Name: "Canteen",
+//   location: "front of junji ",
+//   categories: ["maruya", "bananaque", "kamote", "pancit"],
+//   mainmenu: ["adobo", "sinigang", "mongo",
+//   orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+//     console.log(
+//       `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+//     );
+//   },
+//   // methods ng receipe ng adobo
+//   receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+//     console.log(
+//       `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+//     );
+//   },
+// };
+
+// // MAPS ITERATION
+// const question = new Map([
+//   ["question", "what is the best programing language in 2026"],
+//   [1, "javascript"],
+//   [2, "java"],
+//   [3, "c#"],
+//   [4, "c++"],
+//   [5, "ruby"],
+//   ["Tama", 1],
+//   [true, "Tama "],
+//   [false, "bet ko si abby catacutan sarap!"],
+// ]);
+
+// console.log(question);
+
+// // CONVERT INTO OBJECT TO MAP
+// const scheds = new Map(Object.entries(opensched));
+// console.log(scheds);
+
+// // QUIZ APP
+// console.log(question.get("quest"));
+// for (const [keys, values] of question) {
+//   if (typeof keys === "number") {
+//     console.log(`my Answer${keys}: ${values} `);
+//   }
+// }
+
+// const typeAnswer = Number(prompt("type your the best answer "));
+// console.log(typeAnswer);
+// console.log(question.get(question.get("Tama") === typeAnswer));
+// // CONVERT MAPS TO ARRAY
+
+// console.log(...question);
+// console.log(...question.keys());
+// console.log(...question.values());
+//  MAPS FUNDAMENTALS
+// .set sa map is add value
+// let mer = new Map();
+// mer.set("name", "meryendahan");
+// mer.set(1, "location", "SM fairview");
+// mer.set(2, "owner", "ariel mendoza");
+// console.log(mer);
+
+// mer
+//   .set("pagpipilian", ["maruya", "bananaque", "kamote", "pancit"])
+//   .set("open", 8)
+//   .set("closed", 24)
+//   .set(true, "my store is open")
+//   .set(false, "my store is closed");
+
+// // ang .get() kinukuha ang value
+// console.log(mer.get("location"));
+// console.log(mer.get(true));
+
+// let oras = 22;
+// const sched = mer.get(oras > mer.get("open") && oras < mer.get("closed"));
+// console.log(sched);
+
+// console.log(mer.has("pagpipilian")); // .has is check kung existing
+// mer.delete(2); // deleted
+// mer.delete(1); // deleted
+// mer.clear(); // clear removed all value
+
+// // need declare a variable to array number and object
+// // para mahanap nya ang map keys
+// const array = [2, 4];
+// mer.set(array, "galing kona ba ");
+// mer.set(document.querySelector("h4"), " hello my friends"); // this is don using .set()
+// console.log(mer);
+// console.log(mer.size);
+// console.log(mer.get(array));
+
+// challenge
+// let average = 0;
+// const game = new Map([
+//   [10, `⚽ goal`],
+//   [25, `🔀 Sub`],
+//   [35, `⚽ goal`],
+//   [51, "🔀 Sub"],
+//   [60, `🟨 dilaw na card`],
+//   [67, `🧧 red card`],
+//   [71, "🔀 Sub"],
+//   [73, "🔀 Sub"],
+//   [78, `⚽ goal`],
+//   [84, `⚽ goal`],
+//   [95, "🟨 dilaw na card"],
+// ]);
+
+// const array = [...new Set(game.values())]; //  new set is a unique value no repeat value
+// console.log(array);
+
+// game.delete(60);
+
+// console.log(`your average score: ${game.size / 95}`);
+
+// const oras = [...game.keys()].pop();
+// console.log(oras);
+
+// console.log(`your average score: ${game.size / oras}`);
+
+// for (const [mins, event] of game) {
+//   const kalahati = mins <= 51 ? "FIRST HALF" : "SECOND HALF";
+//   console.log(`${kalahati} HALF ${mins} : ${event}`);
+// }
+
+// WORKING WITH STIRNGS
+const opensched = {
+  weeks: {
+    open: 8,
+    close: 8,
+  },
+
+  wednesday: {
+    open: 7,
+    close: 7,
+  },
+  thursday: {
+    open: 9,
+    close: 9,
+  },
+
+  saturday: {
+    open: 11,
+    close: 11,
+  },
+  sunday: {
+    open: 0,
+    close: 8,
+  },
+};
+
+const meryenda = {
+  Owner: "ariel mendoza",
+  Name: "Canteen",
+  location: "front of junji ",
+  categories: ["maruya", "bananaque", "kamote", "pancit"],
+  mainmenu: ["adobo", "sinigang", "mongo"],
+  orderdeliver({ firstorder = 2, secondorder = 1, address, times = "20:10" }) {
+    console.log(
+      `received your order ${this.categories[firstorder]} , ${this.mainmenu[secondorder]} and will delivered on your ${address} at ${times}`,
+    );
+  },
+  // methods ng receipe ng adobo
+  receipeAdobo(receipe1, receipe2, receipe3, ...others) {
+    console.log(
+      `your secret receipe ng adobo mo napaka sarap receip1 ${receipe1},.. ${receipe2} and ${receipe3}`,
+    );
+  },
+};
+
+const airport = "philippines airport international tambay with edu company";
+const erpolano = "JET2026";
+console.log(airport.toUpperCase(""));
+
+const names = "ArIeL";
+const namelowerC = names.toLowerCase();
+const fupper = namelowerC[0].toUpperCase() + namelowerC.slice(1);
+
+console.log(fupper);
+
+const gmail = "mendoza.ariel.dalubatan@gmail.com";
+const loggmail = "  Mendoza.ARiel.dalubatan@gmail.com  ";
+
+const correctL = loggmail.toLowerCase();
+console.log(correctL.trim()); // .trim() removed a spacing sa loob ng value
+
+const priceflight = "2500₱";
+const priceamerica = priceflight.replace("₱", "$").replace("$", "."); // replace() pag may existing na value ayon ipapalit kung wala walang mang yayare
+console.log(priceamerica);
+
+const announceattendant = `All passengers seat stay calm and enjoy in flight engoy your seat passengers`;
+console.log(announceattendant.replace("passengers", "seaters"));
+console.log(announceattendant.replace(/passengers/g, "seaters"));
+
+// BOOLEAN
+const airplane = "airplane A520fl";
+console.log(airplane.includes("air")); // existing is true
+console.log(airplane.includes("plane")); // not existing FALSE
+console.log(airplane.startsWith("air")); // true existing
+console.log(airplane.startsWith("airs")); // false not existing
+
+if (airplane.startsWith("airplane") && airplane.endsWith("A520fl")) {
+  console.log("enjoy the with your family ");
+}
+
+const checkbagahe = function (materials) {
+  const bagahe = materials.toLowerCase();
+  if (
+    bagahe.includes("Knife") ||
+    bagahe.includes("knife") ||
+    bagahe.includes("Gun") ||
+    bagahe.includes("gun")
+  ) {
+    console.log("your are not a welcome this airport ");
+  } else {
+    console.log("welcome airport");
+  }
+};
+
+checkbagahe("i have a check a Knife for protections");
+checkbagahe("check the Food");
+checkbagahe("check for Gun");
+
+console.log("very+nice+ariel+pogi".split("+"));
+console.log("ariel mendoza dev".split(" "));
+
+const [lastname, firstname] = "ariel mendoza dev".split(" ");
+// 13 40 time
+
+// //Working with strings
+// const airport = "philippines airport international tambay with edu company";
+// const erpolano = "JET2026";
+// console.log(erpolano[0]);
+// console.log(erpolano[3]);
+// console.log(erpolano[1]);
+// console.log("airlines"[3]); // direct access to arrays
+
+// console.log(airport.length);
+// console.log(erpolano.length); // USING LENGTH
+
+// // USING indexof || indexlastof
+// console.log(airport.indexOf("y")); // using indexof kinukuha nya yung first ('Y)
+// console.log(airport.lastIndexOf("y")); // last ('Y) using lastindexOF
+// console.log(airport.indexOf("company"));
+// // USING SLICE
+
+// console.log(airport.slice(5, 11));
+// console.log(airport.slice(12, 19));
+// console.log(airport.slice(airport.indexOf(" "))); //first spacing get using slice(indexOf)
+// console.log(airport.slice(airport.lastIndexOf(" "))); // last spacing get using slice(lastOfindex)
+
+// console.log(airport.slice(1, -1)); // using negative start and end
+
+// const passengerseat = function (seaters) {
+//   const seat = seaters.slice(-1);
+//   if (seat === "A" || seat === "Z") {
+//     console.log("hey you are the VIP seat enjoy your seat ✅✅");
+//   } else {
+//     console.log("enjoy your the seat");
+//   }
+// };
+
+// passengerseat("1A");
+// passengerseat("2Z");
+// passengerseat("3N");
+// passengerseat("4M");
+
+// console.log(new String("ariel pogi")); // stirng
+// console.log(typeof new String("ariel pogi")); // typeof (object)
+// console.log(typeof new String("ariel pogi").slice(2)); // typeof (string)

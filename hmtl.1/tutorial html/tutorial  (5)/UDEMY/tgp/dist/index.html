@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junji Triskelion Community Chapter — TGP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Inter:wght@300;400;500;600&amp;family=Rajdhani:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/tgp.3a01df49.css">
+  </head>
+
+  <!-- Sidebar overlay (mobile) -->
+  <body><div class="overlay-bg" id="overlayBg" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="/logo.3eb009db.png" alt="TGP Logo" id="sidebarLogo">
+      <div class="sidebar-org">Junji Triskelion Community Chapter</div>
+      <div class="sidebar-sub">Rolling Hills Subdivision</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Overview</div>
+      <div class="nav-item active" onclick="showPanel('dashboard', this)">
+        <span class="nav-icon">⬡</span> Dashboard
+      </div>
+
+      <div class="nav-section-label">Members</div>
+      <div class="nav-item" onclick="showPanel('residents', this)">
+        <span class="nav-icon">🏘</span> Residents
+        <span class="nav-badge" id="badge-residents">0</span>
+      </div>
+      <div class="nav-item" onclick="showPanel('welcoming', this)">
+        <span class="nav-icon">🤝</span> Welcoming
+        <span class="nav-badge" id="badge-welcoming">0</span>
+      </div>
+      <div class="nav-item" onclick="showPanel('officers', this)">
+        <span class="nav-icon">⭐</span> Officers
+        <span class="nav-badge" id="badge-officers">0</span>
+      </div>
+      <div class="nav-item" onclick="showPanel('former', this)">
+        <span class="nav-icon">📜</span> Former Officers
+        <span class="nav-badge" id="badge-former">0</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-logout">
+      <button class="btn-logout" onclick="confirmLogout()">
+        <span class="logout-icon">⏻</span> Logout
+      </button>
+    </div>
+    <div class="sidebar-footer">
+      Junji Triskelion Community Chapter<br>Est. 2013 · Batch 07/21
+    </div>
+  </aside>
+
+  <!-- LOGOUT CONFIRM -->
+  <div class="confirm-overlay" id="logoutOverlay">
+    <div class="confirm-box">
+      <div class="icon">⏻</div>
+      <h3>Logout</h3>
+      <p>Are you sure you want to logout from the chapter records system?</p>
+      <div class="confirm-btns">
+        <button class="btn-cancel" onclick="closeLogout()">Cancel</button>
+        <button class="btn-confirm-del" onclick="doLogout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="topbar">
+      <div style="align-items: center; gap: 12px; display: flex">
+        <button class="hamburger" onclick="toggleSidebar()">☰</button>
+        <div class="topbar-title" id="topbarTitle">DASHBOARD</div>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-badge">JUNJI TRISKELION COMMUNITY</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- DASHBOARD -->
+      <div class="panel active" id="panel-dashboard">
+        <div class="dash-hero">
+          <img src="/logo.3eb009db.png" alt="Logo">
+          <div class="dash-hero-text">
+            <h2>Junji Triskelion Community Chapter</h2>
+            <p>Tau Gamma Phi · Rolling Hills Subdivision</p>
+            <p>Chapter Records Management System</p>
+            <div class="motto">"Kapatiran, Katapatan, Kadakilaan"</div>
+          </div>
+          <div class="triskelion-bg">ΤΓΦ</div>
+        </div>
+
+        <div class="stats-strip">
+          <div class="stat-card">
+            <div class="stat-num" id="stat-residents">0</div>
+            <div class="stat-label">Residents</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-welcoming">0</div>
+            <div class="stat-label">Welcoming</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-officers">0</div>
+            <div class="stat-label">Officers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-former">0</div>
+            <div class="stat-label">Former Officers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-total">0</div>
+            <div class="stat-label">Total Members</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Count</th>
+                <th>Quick Access</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🏘 Residents</td>
+                <td><span id="qdash-r">0</span></td>
+                <td>
+                  <button class="btn-edit" onclick="showPanel('residents', null)">
+                    View
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>🤝 Welcoming</td>
+                <td><span id="qdash-w">0</span></td>
+                <td>
+                  <button class="btn-edit" onclick="showPanel('welcoming', null)">
+                    View
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>⭐ Officers</td>
+                <td><span id="qdash-o">0</span></td>
+                <td>
+                  <button class="btn-edit" onclick="showPanel('officers', null)">
+                    View
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>📜 Former Officers</td>
+                <td><span id="qdash-f">0</span></td>
+                <td>
+                  <button class="btn-edit" onclick="showPanel('former', null)">
+                    View
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RESIDENTS -->
+      <div class="panel" id="panel-residents">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1>Residents</h1>
+            <p>All registered resident members of the chapter</p>
+          </div>
+          <button class="btn-add" onclick="openModal('residents')">
+            ＋ Add Resident
+          </button>
+        </div>
+        <div class="search-bar">
+          <div class="search-input-wrap">
+            <span>🔍</span>
+            <input class="search-input" type="text" placeholder="Search residents..." oninput="filterTable('residents', this.value)">
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Alexis</th>
+                <th>Birthdate</th>
+                <th>GT Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-residents">
+              <tr>
+                <td colspan="6">
+                  <div class="empty-state">
+                    <div class="icon">🏘</div>
+                    <p>No residents yet. Add the first one!</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- WELCOMING -->
+      <div class="panel" id="panel-welcoming">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1>Welcoming</h1>
+            <p>Newly welcomed members of the fraternity</p>
+          </div>
+          <button class="btn-add" onclick="openModal('welcoming')">
+            ＋ Add Member
+          </button>
+        </div>
+        <div class="search-bar">
+          <div class="search-input-wrap">
+            <span>🔍</span>
+            <input class="search-input" type="text" placeholder="Search welcoming members..." oninput="filterTable('welcoming', this.value)">
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Alexis</th>
+                <th>Birthdate</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-welcoming">
+              <tr>
+                <td colspan="5">
+                  <div class="empty-state">
+                    <div class="icon">🤝</div>
+                    <p>No welcoming members yet.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OFFICERS -->
+      <div class="panel" id="panel-officers">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1>Officers</h1>
+            <p>Current chapter officers and their positions</p>
+          </div>
+          <button class="btn-add" onclick="openModal('officers')">
+            ＋ Add Officer
+          </button>
+        </div>
+        <div class="search-bar">
+          <div class="search-input-wrap">
+            <span>🔍</span>
+            <input class="search-input" type="text" placeholder="Search officers..." oninput="filterTable('officers', this.value)">
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Alexis</th>
+                <th>Position</th>
+                <th>Birthdate</th>
+                <th>Year</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-officers">
+              <tr>
+                <td colspan="7">
+                  <div class="empty-state">
+                    <div class="icon">⭐</div>
+                    <p>No officers yet.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FORMER OFFICERS -->
+      <div class="panel" id="panel-former">
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1>Former Officers</h1>
+            <p>Past chapter officers and their service records</p>
+          </div>
+          <button class="btn-add" onclick="openModal('former')">
+            ＋ Add Former Officer
+          </button>
+        </div>
+        <div class="search-bar">
+          <div class="search-input-wrap">
+            <span>🔍</span>
+            <input class="search-input" type="text" placeholder="Search former officers..." oninput="filterTable('former', this.value)">
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Alexis</th>
+                <th>Position</th>
+                <th>Birthdate</th>
+                <th>Year Served</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-former">
+              <tr>
+                <td colspan="7">
+                  <div class="empty-state">
+                    <div class="icon">📜</div>
+                    <p>No former officers yet.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Add Member</h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid" id="formFields"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+        <button class="btn-save" onclick="saveRecord()">Save Record</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM DELETE -->
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <div class="icon">⚠️</div>
+      <h3>Delete Record</h3>
+      <p>
+        Are you sure you want to remove this member from the records? This
+        action cannot be undone.
+      </p>
+      <div class="confirm-btns">
+        <button class="btn-cancel" onclick="closeConfirm()">Cancel</button>
+        <button class="btn-confirm-del" onclick="confirmDelete()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV (mobile) -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <div class="bnav-item active" id="bnav-dashboard" onclick="
+          showPanel('dashboard', null);
+          setBottomNav('dashboard');
+        ">
+        <span class="bnav-icon">⬡</span>
+        <span class="bnav-label">Home</span>
+      </div>
+      <div class="bnav-item" id="bnav-residents" onclick="
+          showPanel('residents', null);
+          setBottomNav('residents');
+        ">
+        <span class="bnav-icon">🏘</span>
+        <span class="bnav-label">Residents</span>
+      </div>
+      <div class="bnav-item" id="bnav-welcoming" onclick="
+          showPanel('welcoming', null);
+          setBottomNav('welcoming');
+        ">
+        <span class="bnav-icon">🤝</span>
+        <span class="bnav-label">Welcome</span>
+      </div>
+      <div class="bnav-item" id="bnav-officers" onclick="
+          showPanel('officers', null);
+          setBottomNav('officers');
+        ">
+        <span class="bnav-icon">⭐</span>
+        <span class="bnav-label">Officers</span>
+      </div>
+      <div class="bnav-item" id="bnav-former" onclick="
+          showPanel('former', null);
+          setBottomNav('former');
+        ">
+        <span class="bnav-icon">📜</span>
+        <span class="bnav-label">Former</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="/tgp.7c0ccee6.js"></script>
+
+<script src="/tgp.3464ddca.js"></script></body></html>
