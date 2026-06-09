@@ -1,0 +1,1162 @@
+/* Claude finished the response
+1781000726979_image.png
+create a website with side bar module resident- fullname, alexis, tbrith, GTName, welcoming - fullname , alexis t birth , officer- fullname alexis position tbrith year , former officer fullname alexis position tbrith year gandahan mo yung UI ahh ito logo gandahan mo good UI ahh using html css js GO claude
+
+6:25 PM
+
+Reading frontend design skill
+Reading frontend design skill
+Now let me build this — a premium fraternity chapter management website with the logo's green palette, triskelion motif, and a well-structured sidebar system.
+
+Claude's response was interrupted.
+with crud pala yan sorry hehe
+
+6:26 PM
+No worries! Let me build it with full CRUD (Create, Read, Update, Delete) for all 4 modules.
+
+
+Created a file, read a file
+Created a file, read a file
+Done! Here's what's included:
+
+4 Modules with Full CRUD:
+
+🏘 Residents — Full Name, Alias, Birthdate, GT Name
+🤝 Welcoming — Full Name, Alias, Birthdate
+⭐ Officers — Full Name, Alias, Position (dropdown), Birthdate, Year
+📜 Former Officers — Full Name, Alias, Position, Birthdate, Year Served
+Features:
+
+✅ Add / Edit / Delete with confirmation dialog
+🔍 Live search per module
+📊 Dashboard with live member count stats
+🟡 Gold + deep green palette pulled from the TGP logo
+📱 Mobile responsive with hamburger menu
+Toast notifications on every action
+
+Index
+Code · HTML 
+laguyan mo ng logout button sa baba para maganda tignan tapos bigay mo sakin code
+
+6:30 PM
+
+Edited 3 files, viewed a file
+Edited 3 files, viewed a file
+Now add the logout JS functions:
+
+
+Viewed 2 files, ran 2 commands, edited a file
+Viewed 2 files, ran 2 commands, edited a file
+Nandito na! Here's what was added:
+
+⏻ Logout button — nasa pinaka-baba ng sidebar, red-tinted styling para mapansin agad
+Confirmation dialog — mag-po-prompt muna bago mag-logout para hindi aksidente
+Logout screen — clean TGP logout page na may "Login Again" button para bumalik sa system
+
+Index
+Code · HTML 
+tuloy mo langyung alias papalitan ng alexis
+
+6:32 PM
+
+Check all alias references
+Check all alias references
+Claude's response was interrupted.
+tapos pa lakihan ng onti yung UI parang ang liit sa paningin yung sakto lang
+
+6:33 PM
+
+Replace all Alias labels with Alexis
+Replace all Alias labels with Alexis
+Now enlarge the UI:
+
+
+Ran a command, read a file
+Ran a command, read a file
+Ayos na! Changes:
+
+"Alias" → "Alexis" — sa lahat ng column headers at form fields
+UI pinakalaki — mas malaking fonts, padding, buttons, table rows, stat cards, modal, at sidebar — mas comfortable na sa mata, hindi na masikip 🟢
+
+Index
+Code · HTML 
+1781001318696_image.png
+ito palitan ng junji triskeluin community chapter
+
+6:35 PM
+1781001350413_image.png
+tapos ito logo
+
+6:35 PM
+
+Ran 3 commands, read a file
+Ran 3 commands, read a file
+Updated na! Napalitan ang lahat:
+
+🟢 Logo — yung actual Junji Rolling Hills seal na may triskelion na ginagamit na sa sidebar, dashboard hero, at logout screen
+📛 Org name → Junji Triskelion Community Chapter
+📍 Sub name → Rolling Hills Subdivision
+Lahat ng text sa sidebar, topbar, dashboard, footer, at logout screen na-update na rin
+
+Index
+Code · HTML 
+bigay mo sakin code mismo
+
+6:56 PM
+
+Ran 2 commands, read a file
+Ran 2 commands, read a file
+Heto na! I-download mo lang yung junji-triskelion-chapter.html file. Buo na yung buong code — logo, CRUD, lahat. I-open mo lang sa browser tapos gana na agad. 🟢
+
+
+Junji triskelion chapter
+Code · HTML 
+yung mismong code ayoko ng dowload tyaka gawing mong responsive pwedeng pang mobile view app
+
+6:57 PM
+
+Ran 2 commands, viewed a file
+Ran 2 commands, viewed a file
+Now let me display the full code directly in chat:
+
+
+Read full file to display as code
+Read full file to display as code
+The file is too long to paste here directly (400KB with the embedded logo image). The best way to get the full code is to view the artifact rendered above — click the artifact then use the copy button (top right of the artifact panel) to copy the entire raw HTML code.
+
+Or kung gusto mo, puwede ko siyang i-split into separate files (HTML + CSS + JS) para mas madaling basahin at i-manage. Gusto mo ba ganon?
+
+sge
+
+6:58 PM
+
+Ran 4 commands, read a file
+Ran 4 commands, read a file
+4 files na, heto ang structure:
+
+📁 Project Folder
+ ├── index.html   → main HTML structure (651 lines)
+ ├── style.css    → lahat ng CSS styles (729 lines)
+ ├── app.js       → lahat ng JS / CRUD logic (325 lines)
+ └── logo.png     → Junji Rolling Hills logo
+Paano i-setup:
+
+I-download lahat ng 4 files
+Ilagay sa iisang folder
+I-open ang index.html sa browser — tapos na!
+Mobile responsive na rin — may bottom navigation bar para sa mobile view (Home, Residents, Welcome, Officers, Former) instead ng sidebar. 🟢
+
+
+Index
+Code · HTML 
+
+Style
+Code · CSS 
+
+App
+JS 
+
+Logo
+Image · PNG 
+
+Next time, try this in Cowork
+
+Hand off complex tasks for Claude to handle independently. Come back to finished results.
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Style · CSS
+:root {
+  --green-dark: #0d3d1a;
+  --green-main: #1a5c2a;
+  --green-mid: #236b31;
+  --green-light: #2e8b3f;
+  --green-bright: #3aad52;
+  --gold: #c9a84c;
+  --gold-light: #e8c96a;
+  --white: #f5f5f0;
+  --off-white: #e8e4d8;
+  --gray: #9aa89e;
+  --bg: #081a0e;
+  --sidebar-w: 280px;
+  --radius: 10px;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a2812 0%, #071a0b 100%);
+  border-right: 1px solid rgba(58, 173, 82, 0.18);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: transform 0.3s;
+}
+
+.sidebar-logo {
+  padding: 24px 20px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+.sidebar-logo img {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 18px rgba(201, 168, 76, 0.3);
+  object-fit: cover;
+}
+.sidebar-org {
+  font-family: "Cinzel", serif;
+  font-size: 11.5px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-top: 8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.sidebar-sub {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 11px;
+  color: var(--gray);
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+.nav-section-label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: rgba(201, 168, 76, 0.5);
+  text-transform: uppercase;
+  padding: 12px 20px 4px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray);
+  letter-spacing: 0.5px;
+}
+.nav-item:hover {
+  background: rgba(58, 173, 82, 0.08);
+  color: var(--white);
+}
+.nav-item.active {
+  border-left-color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
+  color: var(--gold);
+}
+.nav-icon {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+.nav-badge {
+  margin-left: auto;
+  background: var(--green-light);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.sidebar-logout {
+  padding: 14px 16px 10px;
+}
+.btn-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 16px;
+  background: rgba(220, 60, 60, 0.08);
+  border: 1px solid rgba(220, 60, 60, 0.22);
+  border-radius: 9px;
+  color: #f47070;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-logout:hover {
+  background: rgba(220, 60, 60, 0.18);
+  border-color: rgba(220, 60, 60, 0.45);
+  color: #ff8080;
+  box-shadow: 0 0 14px rgba(220, 60, 60, 0.15);
+}
+.btn-logout .logout-icon {
+  font-size: 15px;
+}
+
+.sidebar-footer {
+  padding: 10px 20px 14px;
+  font-size: 10px;
+  color: rgba(154, 168, 158, 0.4);
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(58, 173, 82, 0.1);
+}
+
+/* ── MAIN ── */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: rgba(10, 40, 18, 0.95);
+  border-bottom: 1px solid rgba(58, 173, 82, 0.15);
+  padding: 0 32px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+.topbar-title {
+  font-family: "Cinzel", serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.topbar-badge {
+  background: linear-gradient(135deg, var(--green-main), var(--green-light));
+  color: var(--white);
+  font-size: 11px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 36px 38px;
+}
+
+/* ── PANEL ── */
+.panel {
+  display: none;
+}
+.panel.active {
+  display: block;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.page-header-left h1 {
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.page-header-left p {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 4px;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.5px;
+}
+.btn-add {
+  background: linear-gradient(135deg, var(--green-mid), var(--green-bright));
+  color: var(--white);
+  border: none;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(58, 173, 82, 0.3);
+}
+.btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(58, 173, 82, 0.45);
+}
+
+/* ── SEARCH BAR ── */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.search-input-wrap {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+.search-input-wrap span {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 14px;
+}
+.search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(58, 173, 82, 0.2);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  padding: 11px 14px 11px 40px;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-input:focus {
+  border-color: var(--green-bright);
+}
+.search-input::placeholder {
+  color: var(--gray);
+}
+
+/* ── TABLE ── */
+.table-wrap {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(58, 173, 82, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead tr {
+  background: rgba(26, 92, 42, 0.5);
+}
+th {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+tbody tr {
+  border-bottom: 1px solid rgba(58, 173, 82, 0.08);
+  transition: background 0.15s;
+}
+tbody tr:last-child {
+  border-bottom: none;
+}
+tbody tr:hover {
+  background: rgba(58, 173, 82, 0.06);
+}
+td {
+  padding: 15px 20px;
+  font-size: 14px;
+  color: var(--off-white);
+  vertical-align: middle;
+}
+td .alias {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green-bright);
+  letter-spacing: 0.5px;
+}
+td .fullname {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.badge-pos {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.badge-former {
+  background: rgba(154, 168, 158, 0.1);
+  color: var(--gray);
+  border-color: rgba(154, 168, 158, 0.2);
+}
+
+.action-btns {
+  display: flex;
+  gap: 8px;
+}
+.btn-edit,
+.btn-del {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-edit {
+  background: rgba(58, 173, 82, 0.15);
+  color: var(--green-bright);
+  border: 1px solid rgba(58, 173, 82, 0.3);
+}
+.btn-edit:hover {
+  background: rgba(58, 173, 82, 0.3);
+}
+.btn-del {
+  background: rgba(220, 60, 60, 0.1);
+  color: #f47070;
+  border: 1px solid rgba(220, 60, 60, 0.25);
+}
+.btn-del:hover {
+  background: rgba(220, 60, 60, 0.25);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 52px 20px;
+  color: var(--gray);
+}
+.empty-state .icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+.empty-state p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(58, 173, 82, 0.15);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  text-align: center;
+}
+.stat-num {
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open {
+  display: flex;
+}
+.modal {
+  background: linear-gradient(160deg, #0e2d18 0%, #071a0b 100%);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  animation: slideUp 0.25s ease;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal-head {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-head h2 {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.modal-close:hover {
+  color: var(--white);
+}
+.modal-body {
+  padding: 22px 24px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-grid .full {
+  grid-column: 1 / -1;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(58, 173, 82, 0.25);
+  border-radius: 7px;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  padding: 11px 13px;
+  outline: none;
+  transition: border 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--green-bright);
+}
+.form-group select option {
+  background: #0e2d18;
+}
+.modal-foot {
+  padding: 14px 24px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.btn-cancel {
+  background: transparent;
+  border: 1px solid rgba(154, 168, 158, 0.25);
+  color: var(--gray);
+  border-radius: 7px;
+  padding: 9px 20px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-cancel:hover {
+  border-color: var(--gray);
+  color: var(--white);
+}
+.btn-save {
+  background: linear-gradient(135deg, var(--green-mid), var(--green-bright));
+  border: none;
+  color: var(--white);
+  border-radius: 7px;
+  padding: 9px 26px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(58, 173, 82, 0.3);
+}
+.btn-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(58, 173, 82, 0.45);
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── CONFIRM ── */
+.confirm-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-overlay.open {
+  display: flex;
+}
+.confirm-box {
+  background: linear-gradient(160deg, #0e2d18, #071a0b);
+  border: 1px solid rgba(220, 60, 60, 0.3);
+  border-radius: 14px;
+  padding: 28px;
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+.confirm-box .icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+.confirm-box h3 {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.confirm-box p {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.confirm-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.btn-confirm-del {
+  background: rgba(220, 60, 60, 0.8);
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  padding: 9px 22px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-confirm-del:hover {
+  background: rgba(220, 60, 60, 1);
+}
+
+/* ── DASHBOARD ── */
+.dash-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 92, 42, 0.4) 0%,
+    rgba(13, 61, 26, 0.6) 100%
+  );
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 14px;
+  padding: 42px 44px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  position: relative;
+}
+.dash-hero::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 76, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.dash-hero img {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.dash-hero-text h2 {
+  font-family: "Cinzel", serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.dash-hero-text p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+.dash-hero-text .motto {
+  font-style: italic;
+  color: rgba(201, 168, 76, 0.6);
+  font-size: 12px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  font-family: "Cinzel", serif;
+}
+
+.triskelion-bg {
+  position: absolute;
+  right: 40px;
+  font-size: 120px;
+  opacity: 0.06;
+  user-select: none;
+  line-height: 1;
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(58, 173, 82, 0.3);
+  border-radius: 3px;
+}
+
+/* ── BOTTOM NAV (mobile) ── */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0a2812;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  z-index: 200;
+  padding: 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+.bottom-nav-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.bnav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 4px 8px;
+  cursor: pointer;
+  border-top: 3px solid transparent;
+  transition: all 0.2s;
+  gap: 3px;
+}
+.bnav-item.active {
+  border-top-color: var(--gold);
+  background: rgba(201, 168, 76, 0.07);
+}
+.bnav-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+.bnav-label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.bnav-item.active .bnav-label {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-w: 0px;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main {
+    margin-left: 0;
+    padding-bottom: 70px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .topbar {
+    padding: 0 16px;
+    height: 58px;
+  }
+  .topbar-title {
+    font-size: 14px;
+  }
+  .topbar-badge {
+    display: none;
+  }
+  .content {
+    padding: 18px 14px 20px;
+  }
+  .bottom-nav {
+    display: block;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .page-header-left h1 {
+    font-size: 22px;
+  }
+  .btn-add {
+    width: 100%;
+    justify-content: center;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid .full {
+    grid-column: 1;
+  }
+  .dash-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 18px;
+    gap: 16px;
+  }
+  .dash-hero img {
+    width: 80px;
+    height: 80px;
+  }
+  .dash-hero-text h2 {
+    font-size: 18px;
+  }
+  .triskelion-bg {
+    display: none;
+  }
+  .stats-strip {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 14px 10px;
+  }
+  .stat-num {
+    font-size: 26px;
+  }
+  .stat-label {
+    font-size: 10px;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table {
+    min-width: 500px;
+  }
+  th {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+  td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .action-btns {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .btn-edit,
+  .btn-del {
+    padding: 7px 12px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .modal {
+    margin: 12px;
+  }
+  .modal-body {
+    padding: 16px 18px;
+  }
+  .confirm-box {
+    padding: 22px 18px;
+  }
+  .toast {
+    bottom: 80px;
+    right: 14px;
+    left: 14px;
+    text-align: center;
+  }
+  .search-input {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page-header-left h1 {
+    font-size: 20px;
+  }
+}
+
+.overlay-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+.overlay-bg.open {
+  display: block;
+}
